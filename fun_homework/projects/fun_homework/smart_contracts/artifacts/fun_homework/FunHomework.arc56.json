@@ -1,0 +1,202 @@
+{
+    "name": "FunHomework",
+    "structs": {},
+    "methods": [
+        {
+            "name": "hello",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "name"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "set_github_handle",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "github_handle"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "get_github_handle",
+            "args": [],
+            "returns": {
+                "type": "string"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "initialize_github_handle",
+            "args": [],
+            "returns": {
+                "type": "void"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "events": [],
+            "recommendations": {}
+        },
+        {
+            "name": "deposit",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "github_handle"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            },
+            "actions": {
+                "create": [],
+                "call": [
+                    "NoOp"
+                ]
+            },
+            "readonly": false,
+            "desc": "Deposit a GitHub handle into the github box",
+            "events": [],
+            "recommendations": {}
+        }
+    ],
+    "arcs": [
+        22,
+        28
+    ],
+    "networks": {},
+    "state": {
+        "schema": {
+            "global": {
+                "ints": 0,
+                "bytes": 0
+            },
+            "local": {
+                "ints": 0,
+                "bytes": 0
+            }
+        },
+        "keys": {
+            "global": {},
+            "local": {},
+            "box": {}
+        },
+        "maps": {
+            "global": {},
+            "local": {},
+            "box": {
+                "github_box": {
+                    "keyType": "AVMString",
+                    "valueType": "AVMString",
+                    "prefix": "Z2l0aHViX2JveA=="
+                }
+            }
+        }
+    },
+    "bareActions": {
+        "create": [
+            "NoOp"
+        ],
+        "call": []
+    },
+    "sourceInfo": {
+        "approval": {
+            "sourceInfo": [
+                {
+                    "pc": [
+                        81,
+                        111,
+                        123,
+                        147,
+                        165
+                    ],
+                    "errorMessage": "OnCompletion is not NoOp"
+                },
+                {
+                    "pc": [
+                        200
+                    ],
+                    "errorMessage": "can only call when creating"
+                },
+                {
+                    "pc": [
+                        84,
+                        114,
+                        126,
+                        150,
+                        168
+                    ],
+                    "errorMessage": "can only call when not creating"
+                },
+                {
+                    "pc": [
+                        232
+                    ],
+                    "errorMessage": "check self.github_box entry exists"
+                }
+            ],
+            "pcOffsetMethod": "none"
+        },
+        "clear": {
+            "sourceInfo": [],
+            "pcOffsetMethod": "none"
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDEwCiNwcmFnbWEgdHlwZXRyYWNrIGZhbHNlCgovLyBzbWFydF9jb250cmFjdHMuZnVuX2hvbWV3b3JrLmNvbnRyYWN0LkZ1bkhvbWV3b3JrLl9fYWxnb3B5X2VudHJ5cG9pbnRfd2l0aF9pbml0KCkgLT4gdWludDY0OgptYWluOgogICAgaW50Y2Jsb2NrIDEKICAgIGJ5dGVjYmxvY2sgImdpdGh1Yl9ib3hnaXRodWIiIDB4MTUxZjdjNzUKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6NQogICAgLy8gY2xhc3MgRnVuSG9tZXdvcmsoQVJDNENvbnRyYWN0KToKICAgIHR4biBOdW1BcHBBcmdzCiAgICBieiBtYWluX2JhcmVfcm91dGluZ0AxMAogICAgcHVzaGJ5dGVzcyAweDAyYmVjZTExIDB4ZGU5OWNjZTcgMHg4Y2JlNjE3ZCAweDVmZmYxYjk4IDB4MzYyMDVkOTUgLy8gbWV0aG9kICJoZWxsbyhzdHJpbmcpc3RyaW5nIiwgbWV0aG9kICJzZXRfZ2l0aHViX2hhbmRsZShzdHJpbmcpdm9pZCIsIG1ldGhvZCAiZ2V0X2dpdGh1Yl9oYW5kbGUoKXN0cmluZyIsIG1ldGhvZCAiaW5pdGlhbGl6ZV9naXRodWJfaGFuZGxlKCl2b2lkIiwgbWV0aG9kICJkZXBvc2l0KHN0cmluZylzdHJpbmciCiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAwCiAgICBtYXRjaCBtYWluX2hlbGxvX3JvdXRlQDUgbWFpbl9zZXRfZ2l0aHViX2hhbmRsZV9yb3V0ZUA2IG1haW5fZ2V0X2dpdGh1Yl9oYW5kbGVfcm91dGVANyBtYWluX2luaXRpYWxpemVfZ2l0aHViX2hhbmRsZV9yb3V0ZUA4IG1haW5fZGVwb3NpdF9yb3V0ZUA5CgptYWluX2FmdGVyX2lmX2Vsc2VAMTI6CiAgICAvLyBzbWFydF9jb250cmFjdHMvZnVuX2hvbWV3b3JrL2NvbnRyYWN0LnB5OjUKICAgIC8vIGNsYXNzIEZ1bkhvbWV3b3JrKEFSQzRDb250cmFjdCk6CiAgICBwdXNoaW50IDAgLy8gMAogICAgcmV0dXJuCgptYWluX2RlcG9zaXRfcm91dGVAOToKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6MjUKICAgIC8vIEBhYmltZXRob2QoKQogICAgdHhuIE9uQ29tcGxldGlvbgogICAgIQogICAgYXNzZXJ0IC8vIE9uQ29tcGxldGlvbiBpcyBub3QgTm9PcAogICAgdHhuIEFwcGxpY2F0aW9uSUQKICAgIGFzc2VydCAvLyBjYW4gb25seSBjYWxsIHdoZW4gbm90IGNyZWF0aW5nCiAgICAvLyBzbWFydF9jb250cmFjdHMvZnVuX2hvbWV3b3JrL2NvbnRyYWN0LnB5OjUKICAgIC8vIGNsYXNzIEZ1bkhvbWV3b3JrKEFSQzRDb250cmFjdCk6CiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICBleHRyYWN0IDIgMAogICAgLy8gc21hcnRfY29udHJhY3RzL2Z1bl9ob21ld29yay9jb250cmFjdC5weToyNQogICAgLy8gQGFiaW1ldGhvZCgpCiAgICBjYWxsc3ViIGRlcG9zaXQKICAgIGR1cAogICAgbGVuCiAgICBpdG9iCiAgICBleHRyYWN0IDYgMgogICAgc3dhcAogICAgY29uY2F0CiAgICBieXRlY18xIC8vIDB4MTUxZjdjNzUKICAgIHN3YXAKICAgIGNvbmNhdAogICAgbG9nCiAgICBpbnRjXzAgLy8gMQogICAgcmV0dXJuCgptYWluX2luaXRpYWxpemVfZ2l0aHViX2hhbmRsZV9yb3V0ZUA4OgogICAgLy8gc21hcnRfY29udHJhY3RzL2Z1bl9ob21ld29yay9jb250cmFjdC5weToyMQogICAgLy8gQGFiaW1ldGhvZCgpCiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICBhc3NlcnQgLy8gT25Db21wbGV0aW9uIGlzIG5vdCBOb09wCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgYXNzZXJ0IC8vIGNhbiBvbmx5IGNhbGwgd2hlbiBub3QgY3JlYXRpbmcKICAgIGNhbGxzdWIgaW5pdGlhbGl6ZV9naXRodWJfaGFuZGxlCiAgICBpbnRjXzAgLy8gMQogICAgcmV0dXJuCgptYWluX2dldF9naXRodWJfaGFuZGxlX3JvdXRlQDc6CiAgICAvLyBzbWFydF9jb250cmFjdHMvZnVuX2hvbWV3b3JrL2NvbnRyYWN0LnB5OjE3CiAgICAvLyBAYWJpbWV0aG9kKCkKICAgIHR4biBPbkNvbXBsZXRpb24KICAgICEKICAgIGFzc2VydCAvLyBPbkNvbXBsZXRpb24gaXMgbm90IE5vT3AKICAgIHR4biBBcHBsaWNhdGlvbklECiAgICBhc3NlcnQgLy8gY2FuIG9ubHkgY2FsbCB3aGVuIG5vdCBjcmVhdGluZwogICAgY2FsbHN1YiBnZXRfZ2l0aHViX2hhbmRsZQogICAgZHVwCiAgICBsZW4KICAgIGl0b2IKICAgIGV4dHJhY3QgNiAyCiAgICBzd2FwCiAgICBjb25jYXQKICAgIGJ5dGVjXzEgLy8gMHgxNTFmN2M3NQogICAgc3dhcAogICAgY29uY2F0CiAgICBsb2cKICAgIGludGNfMCAvLyAxCiAgICByZXR1cm4KCm1haW5fc2V0X2dpdGh1Yl9oYW5kbGVfcm91dGVANjoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6MTMKICAgIC8vIEBhYmltZXRob2QoKQogICAgdHhuIE9uQ29tcGxldGlvbgogICAgIQogICAgYXNzZXJ0IC8vIE9uQ29tcGxldGlvbiBpcyBub3QgTm9PcAogICAgdHhuIEFwcGxpY2F0aW9uSUQKICAgIGFzc2VydCAvLyBjYW4gb25seSBjYWxsIHdoZW4gbm90IGNyZWF0aW5nCiAgICAvLyBzbWFydF9jb250cmFjdHMvZnVuX2hvbWV3b3JrL2NvbnRyYWN0LnB5OjUKICAgIC8vIGNsYXNzIEZ1bkhvbWV3b3JrKEFSQzRDb250cmFjdCk6CiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICBleHRyYWN0IDIgMAogICAgLy8gc21hcnRfY29udHJhY3RzL2Z1bl9ob21ld29yay9jb250cmFjdC5weToxMwogICAgLy8gQGFiaW1ldGhvZCgpCiAgICBjYWxsc3ViIHNldF9naXRodWJfaGFuZGxlCiAgICBpbnRjXzAgLy8gMQogICAgcmV0dXJuCgptYWluX2hlbGxvX3JvdXRlQDU6CiAgICAvLyBzbWFydF9jb250cmFjdHMvZnVuX2hvbWV3b3JrL2NvbnRyYWN0LnB5OjkKICAgIC8vIEBhYmltZXRob2QoKQogICAgdHhuIE9uQ29tcGxldGlvbgogICAgIQogICAgYXNzZXJ0IC8vIE9uQ29tcGxldGlvbiBpcyBub3QgTm9PcAogICAgdHhuIEFwcGxpY2F0aW9uSUQKICAgIGFzc2VydCAvLyBjYW4gb25seSBjYWxsIHdoZW4gbm90IGNyZWF0aW5nCiAgICAvLyBzbWFydF9jb250cmFjdHMvZnVuX2hvbWV3b3JrL2NvbnRyYWN0LnB5OjUKICAgIC8vIGNsYXNzIEZ1bkhvbWV3b3JrKEFSQzRDb250cmFjdCk6CiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICBleHRyYWN0IDIgMAogICAgLy8gc21hcnRfY29udHJhY3RzL2Z1bl9ob21ld29yay9jb250cmFjdC5weTo5CiAgICAvLyBAYWJpbWV0aG9kKCkKICAgIGNhbGxzdWIgaGVsbG8KICAgIGR1cAogICAgbGVuCiAgICBpdG9iCiAgICBleHRyYWN0IDYgMgogICAgc3dhcAogICAgY29uY2F0CiAgICBieXRlY18xIC8vIDB4MTUxZjdjNzUKICAgIHN3YXAKICAgIGNvbmNhdAogICAgbG9nCiAgICBpbnRjXzAgLy8gMQogICAgcmV0dXJuCgptYWluX2JhcmVfcm91dGluZ0AxMDoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6NQogICAgLy8gY2xhc3MgRnVuSG9tZXdvcmsoQVJDNENvbnRyYWN0KToKICAgIHR4biBPbkNvbXBsZXRpb24KICAgIGJueiBtYWluX2FmdGVyX2lmX2Vsc2VAMTIKICAgIHR4biBBcHBsaWNhdGlvbklECiAgICAhCiAgICBhc3NlcnQgLy8gY2FuIG9ubHkgY2FsbCB3aGVuIGNyZWF0aW5nCiAgICBpbnRjXzAgLy8gMQogICAgcmV0dXJuCgoKLy8gc21hcnRfY29udHJhY3RzLmZ1bl9ob21ld29yay5jb250cmFjdC5GdW5Ib21ld29yay5oZWxsbyhuYW1lOiBieXRlcykgLT4gYnl0ZXM6CmhlbGxvOgogICAgLy8gc21hcnRfY29udHJhY3RzL2Z1bl9ob21ld29yay9jb250cmFjdC5weTo5LTEwCiAgICAvLyBAYWJpbWV0aG9kKCkKICAgIC8vIGRlZiBoZWxsbyhzZWxmLCBuYW1lOiBTdHJpbmcpIC0+IFN0cmluZzoKICAgIHByb3RvIDEgMQogICAgLy8gc21hcnRfY29udHJhY3RzL2Z1bl9ob21ld29yay9jb250cmFjdC5weToxMQogICAgLy8gcmV0dXJuICJIZWxsbywgIiArIG5hbWUKICAgIHB1c2hieXRlcyAiSGVsbG8sICIKICAgIGZyYW1lX2RpZyAtMQogICAgY29uY2F0CiAgICByZXRzdWIKCgovLyBzbWFydF9jb250cmFjdHMuZnVuX2hvbWV3b3JrLmNvbnRyYWN0LkZ1bkhvbWV3b3JrLnNldF9naXRodWJfaGFuZGxlKGdpdGh1Yl9oYW5kbGU6IGJ5dGVzKSAtPiB2b2lkOgpzZXRfZ2l0aHViX2hhbmRsZToKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6MTMtMTQKICAgIC8vIEBhYmltZXRob2QoKQogICAgLy8gZGVmIHNldF9naXRodWJfaGFuZGxlKHNlbGYsIGdpdGh1Yl9oYW5kbGU6IFN0cmluZykgLT4gTm9uZToKICAgIHByb3RvIDEgMAogICAgLy8gc21hcnRfY29udHJhY3RzL2Z1bl9ob21ld29yay9jb250cmFjdC5weToxNQogICAgLy8gc2VsZi5naXRodWJfYm94W1N0cmluZygiZ2l0aHViIildID0gZ2l0aHViX2hhbmRsZQogICAgYnl0ZWNfMCAvLyAiZ2l0aHViX2JveGdpdGh1YiIKICAgIGJveF9kZWwKICAgIHBvcAogICAgYnl0ZWNfMCAvLyAiZ2l0aHViX2JveGdpdGh1YiIKICAgIGZyYW1lX2RpZyAtMQogICAgYm94X3B1dAogICAgcmV0c3ViCgoKLy8gc21hcnRfY29udHJhY3RzLmZ1bl9ob21ld29yay5jb250cmFjdC5GdW5Ib21ld29yay5nZXRfZ2l0aHViX2hhbmRsZSgpIC0+IGJ5dGVzOgpnZXRfZ2l0aHViX2hhbmRsZToKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6MTkKICAgIC8vIHJldHVybiBzZWxmLmdpdGh1Yl9ib3hbU3RyaW5nKCJnaXRodWIiKV0KICAgIGJ5dGVjXzAgLy8gImdpdGh1Yl9ib3hnaXRodWIiCiAgICBib3hfZ2V0CiAgICBhc3NlcnQgLy8gY2hlY2sgc2VsZi5naXRodWJfYm94IGVudHJ5IGV4aXN0cwogICAgcmV0c3ViCgoKLy8gc21hcnRfY29udHJhY3RzLmZ1bl9ob21ld29yay5jb250cmFjdC5GdW5Ib21ld29yay5pbml0aWFsaXplX2dpdGh1Yl9oYW5kbGUoKSAtPiB2b2lkOgppbml0aWFsaXplX2dpdGh1Yl9oYW5kbGU6CiAgICAvLyBzbWFydF9jb250cmFjdHMvZnVuX2hvbWV3b3JrL2NvbnRyYWN0LnB5OjIzCiAgICAvLyBzZWxmLnNldF9naXRodWJfaGFuZGxlKFN0cmluZygiZGV2YmxhYyIpKQogICAgcHVzaGJ5dGVzICJkZXZibGFjIgogICAgY2FsbHN1YiBzZXRfZ2l0aHViX2hhbmRsZQogICAgcmV0c3ViCgoKLy8gc21hcnRfY29udHJhY3RzLmZ1bl9ob21ld29yay5jb250cmFjdC5GdW5Ib21ld29yay5kZXBvc2l0KGdpdGh1Yl9oYW5kbGU6IGJ5dGVzKSAtPiBieXRlczoKZGVwb3NpdDoKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6MjUtMjYKICAgIC8vIEBhYmltZXRob2QoKQogICAgLy8gZGVmIGRlcG9zaXQoc2VsZiwgZ2l0aHViX2hhbmRsZTogU3RyaW5nKSAtPiBTdHJpbmc6CiAgICBwcm90byAxIDEKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6MjgKICAgIC8vIHNlbGYuZ2l0aHViX2JveFtTdHJpbmcoImdpdGh1YiIpXSA9IGdpdGh1Yl9oYW5kbGUKICAgIGJ5dGVjXzAgLy8gImdpdGh1Yl9ib3hnaXRodWIiCiAgICBib3hfZGVsCiAgICBwb3AKICAgIGJ5dGVjXzAgLy8gImdpdGh1Yl9ib3hnaXRodWIiCiAgICBmcmFtZV9kaWcgLTEKICAgIGJveF9wdXQKICAgIC8vIHNtYXJ0X2NvbnRyYWN0cy9mdW5faG9tZXdvcmsvY29udHJhY3QucHk6MjkKICAgIC8vIHJldHVybiAiRGVwb3NpdGVkIEdpdEh1YiBoYW5kbGU6ICIgKyBnaXRodWJfaGFuZGxlCiAgICBwdXNoYnl0ZXMgIkRlcG9zaXRlZCBHaXRIdWIgaGFuZGxlOiAiCiAgICBmcmFtZV9kaWcgLTEKICAgIGNvbmNhdAogICAgcmV0c3ViCg==",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDEwCiNwcmFnbWEgdHlwZXRyYWNrIGZhbHNlCgovLyBhbGdvcHkuYXJjNC5BUkM0Q29udHJhY3QuY2xlYXJfc3RhdGVfcHJvZ3JhbSgpIC0+IHVpbnQ2NDoKbWFpbjoKICAgIHB1c2hpbnQgMSAvLyAxCiAgICByZXR1cm4K"
+    },
+    "byteCode": {
+        "approval": "CiABASYCEGdpdGh1Yl9ib3hnaXRodWIEFR98dTEbQQCfggUEAr7OEQTemcznBIy+YX0EX/8bmAQ2IF2VNhoAjgUAVwBFAC0AIQADgQBDMRkURDEYRDYaAVcCAIgAmUkVFlcGAkxQKUxQsCJDMRkURDEYRIgAdCJDMRkURDEYRIgAZEkVFlcGAkxQKUxQsCJDMRkURDEYRDYaAVcCAIgAOyJDMRkURDEYRDYaAVcCAIgAGUkVFlcGAkxQKUxQsCJDMRlA/4YxGBREIkOKAQGAB0hlbGxvLCCL/1CJigEAKLxIKIv/v4kovkSJgAdkZXZibGFjiP/liYoBASi8SCiL/7+AGURlcG9zaXRlZCBHaXRIdWIgaGFuZGxlOiCL/1CJ",
+        "clear": "CoEBQw=="
+    },
+    "compilerInfo": {
+        "compiler": "puya",
+        "compilerVersion": {
+            "major": 4,
+            "minor": 10,
+            "patch": 0
+        }
+    },
+    "events": [],
+    "templateVariables": {}
+}

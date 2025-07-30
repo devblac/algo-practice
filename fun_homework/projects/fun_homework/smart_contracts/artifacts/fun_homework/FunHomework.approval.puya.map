@@ -1,0 +1,1001 @@
+{
+  "version": 3,
+  "sources": [
+    "../../fun_homework/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;AAIA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;;;AAoBK;;AAAA;AAAA;AAAA;;AAAA;AApBL;;;AAAA;;;AAoBK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AARL;;;AAAA;;;AAQK;;;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAJL;;;AAAA;;;AAIK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAJL;;AAAA;;;;;;;;;AAIA;;;AAEe;;;;;;;;;AAAA;;AAAA;AAAP;AAER;;;AAEQ;AAAA;;AAAA;AAAA;;AAAA;;AAIO;AAAA;AAAA;AAAP;AAIuB;;;;;;;;;AAAvB;;;;AAER;;;AAGQ;AAAA;;AAAA;AAAA;;AAAA;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AAAA;AAAP",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.fun_homework.contract.FunHomework.__algopy_entrypoint_with_init",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 1"
+    },
+    "4": {
+      "op": "bytecblock \"github_boxgithub\" 0x151f7c75"
+    },
+    "28": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "30": {
+      "op": "bz main_bare_routing@10",
+      "stack_out": []
+    },
+    "33": {
+      "op": "pushbytess 0x02bece11 0xde99cce7 0x8cbe617d 0x5fff1b98 0x36205d95 // method \"hello(string)string\", method \"set_github_handle(string)void\", method \"get_github_handle()string\", method \"initialize_github_handle()void\", method \"deposit(string)string\"",
+      "defined_out": [
+        "Method(deposit(string)string)",
+        "Method(get_github_handle()string)",
+        "Method(hello(string)string)",
+        "Method(initialize_github_handle()void)",
+        "Method(set_github_handle(string)void)"
+      ],
+      "stack_out": [
+        "Method(hello(string)string)",
+        "Method(set_github_handle(string)void)",
+        "Method(get_github_handle()string)",
+        "Method(initialize_github_handle()void)",
+        "Method(deposit(string)string)"
+      ]
+    },
+    "60": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(deposit(string)string)",
+        "Method(get_github_handle()string)",
+        "Method(hello(string)string)",
+        "Method(initialize_github_handle()void)",
+        "Method(set_github_handle(string)void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(hello(string)string)",
+        "Method(set_github_handle(string)void)",
+        "Method(get_github_handle()string)",
+        "Method(initialize_github_handle()void)",
+        "Method(deposit(string)string)",
+        "tmp%2#0"
+      ]
+    },
+    "63": {
+      "op": "match main_hello_route@5 main_set_github_handle_route@6 main_get_github_handle_route@7 main_initialize_github_handle_route@8 main_deposit_route@9",
+      "stack_out": []
+    },
+    "75": {
+      "block": "main_after_if_else@12",
+      "stack_in": [],
+      "op": "pushint 0 // 0",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "77": {
+      "op": "return",
+      "stack_out": []
+    },
+    "78": {
+      "block": "main_deposit_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "80": {
+      "op": "!",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "81": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "82": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "84": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "85": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "88": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "91": {
+      "callsub": "smart_contracts.fun_homework.contract.FunHomework.deposit",
+      "op": "callsub deposit",
+      "defined_out": [
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0"
+      ]
+    },
+    "94": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ]
+    },
+    "95": {
+      "op": "len",
+      "defined_out": [
+        "length%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "length%2#0"
+      ]
+    },
+    "96": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "as_bytes%2#0"
+      ]
+    },
+    "97": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "length_uint16%2#0"
+      ]
+    },
+    "100": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%2#0",
+        "to_encode%2#0"
+      ]
+    },
+    "101": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%2#0"
+      ]
+    },
+    "102": {
+      "op": "bytec_1 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "103": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%2#0"
+      ]
+    },
+    "104": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "105": {
+      "op": "log",
+      "stack_out": []
+    },
+    "106": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "107": {
+      "op": "return",
+      "stack_out": []
+    },
+    "108": {
+      "block": "main_initialize_github_handle_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "110": {
+      "op": "!",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "111": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "112": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "114": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "115": {
+      "callsub": "smart_contracts.fun_homework.contract.FunHomework.initialize_github_handle",
+      "op": "callsub initialize_github_handle"
+    },
+    "118": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "119": {
+      "op": "return",
+      "stack_out": []
+    },
+    "120": {
+      "block": "main_get_github_handle_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "122": {
+      "op": "!",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "123": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "124": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "126": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "127": {
+      "callsub": "smart_contracts.fun_homework.contract.FunHomework.get_github_handle",
+      "op": "callsub get_github_handle",
+      "defined_out": [
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0"
+      ]
+    },
+    "130": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ]
+    },
+    "131": {
+      "op": "len",
+      "defined_out": [
+        "length%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "length%1#0"
+      ]
+    },
+    "132": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "as_bytes%1#0"
+      ]
+    },
+    "133": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "length_uint16%1#0"
+      ]
+    },
+    "136": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%1#0",
+        "to_encode%1#0"
+      ]
+    },
+    "137": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0"
+      ]
+    },
+    "138": {
+      "op": "bytec_1 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "139": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%1#0"
+      ]
+    },
+    "140": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "141": {
+      "op": "log",
+      "stack_out": []
+    },
+    "142": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "143": {
+      "op": "return",
+      "stack_out": []
+    },
+    "144": {
+      "block": "main_set_github_handle_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "146": {
+      "op": "!",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "147": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "148": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "150": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "151": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "154": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "157": {
+      "callsub": "smart_contracts.fun_homework.contract.FunHomework.set_github_handle",
+      "op": "callsub set_github_handle",
+      "stack_out": []
+    },
+    "160": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "161": {
+      "op": "return",
+      "stack_out": []
+    },
+    "162": {
+      "block": "main_hello_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "164": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "165": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "166": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "168": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "169": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "172": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "175": {
+      "callsub": "smart_contracts.fun_homework.contract.FunHomework.hello",
+      "op": "callsub hello",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "178": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ]
+    },
+    "179": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length%0#0"
+      ]
+    },
+    "180": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "181": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "184": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ]
+    },
+    "185": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "186": {
+      "op": "bytec_1 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "187": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ]
+    },
+    "188": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "189": {
+      "op": "log",
+      "stack_out": []
+    },
+    "190": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "191": {
+      "op": "return",
+      "stack_out": []
+    },
+    "192": {
+      "block": "main_bare_routing@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "194": {
+      "op": "bnz main_after_if_else@12",
+      "stack_out": []
+    },
+    "197": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%33#0"
+      ]
+    },
+    "199": {
+      "op": "!",
+      "defined_out": [
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%34#0"
+      ]
+    },
+    "200": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "201": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "202": {
+      "op": "return",
+      "stack_out": []
+    },
+    "203": {
+      "subroutine": "smart_contracts.fun_homework.contract.FunHomework.hello",
+      "params": {
+        "name#0": "bytes"
+      },
+      "block": "hello",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "206": {
+      "op": "pushbytes \"Hello, \"",
+      "defined_out": [
+        "\"Hello, \""
+      ],
+      "stack_out": [
+        "\"Hello, \""
+      ]
+    },
+    "215": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"Hello, \"",
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "\"Hello, \"",
+        "name#0 (copy)"
+      ]
+    },
+    "217": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "218": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "219": {
+      "subroutine": "smart_contracts.fun_homework.contract.FunHomework.set_github_handle",
+      "params": {
+        "github_handle#0": "bytes"
+      },
+      "block": "set_github_handle",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "222": {
+      "op": "bytec_0 // \"github_boxgithub\"",
+      "defined_out": [
+        "\"github_boxgithub\""
+      ],
+      "stack_out": [
+        "\"github_boxgithub\""
+      ]
+    },
+    "223": {
+      "op": "box_del",
+      "defined_out": [
+        "{box_del}"
+      ],
+      "stack_out": [
+        "{box_del}"
+      ]
+    },
+    "224": {
+      "op": "pop",
+      "stack_out": []
+    },
+    "225": {
+      "op": "bytec_0 // \"github_boxgithub\"",
+      "stack_out": [
+        "\"github_boxgithub\""
+      ]
+    },
+    "226": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"github_boxgithub\"",
+        "github_handle#0 (copy)"
+      ],
+      "stack_out": [
+        "\"github_boxgithub\"",
+        "github_handle#0 (copy)"
+      ]
+    },
+    "228": {
+      "op": "box_put",
+      "stack_out": []
+    },
+    "229": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "230": {
+      "subroutine": "smart_contracts.fun_homework.contract.FunHomework.get_github_handle",
+      "params": {},
+      "block": "get_github_handle",
+      "stack_in": [],
+      "op": "bytec_0 // \"github_boxgithub\"",
+      "defined_out": [
+        "\"github_boxgithub\""
+      ],
+      "stack_out": [
+        "\"github_boxgithub\""
+      ]
+    },
+    "231": {
+      "op": "box_get",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "232": {
+      "error": "check self.github_box entry exists",
+      "op": "assert // check self.github_box entry exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "233": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "234": {
+      "subroutine": "smart_contracts.fun_homework.contract.FunHomework.initialize_github_handle",
+      "params": {},
+      "block": "initialize_github_handle",
+      "stack_in": [],
+      "op": "pushbytes \"devblac\"",
+      "defined_out": [
+        "\"devblac\""
+      ],
+      "stack_out": [
+        "\"devblac\""
+      ]
+    },
+    "243": {
+      "callsub": "smart_contracts.fun_homework.contract.FunHomework.set_github_handle",
+      "op": "callsub set_github_handle",
+      "stack_out": []
+    },
+    "246": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "247": {
+      "subroutine": "smart_contracts.fun_homework.contract.FunHomework.deposit",
+      "params": {
+        "github_handle#0": "bytes"
+      },
+      "block": "deposit",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "250": {
+      "op": "bytec_0 // \"github_boxgithub\"",
+      "defined_out": [
+        "\"github_boxgithub\""
+      ],
+      "stack_out": [
+        "\"github_boxgithub\""
+      ]
+    },
+    "251": {
+      "op": "box_del",
+      "defined_out": [
+        "{box_del}"
+      ],
+      "stack_out": [
+        "{box_del}"
+      ]
+    },
+    "252": {
+      "op": "pop",
+      "stack_out": []
+    },
+    "253": {
+      "op": "bytec_0 // \"github_boxgithub\"",
+      "stack_out": [
+        "\"github_boxgithub\""
+      ]
+    },
+    "254": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"github_boxgithub\"",
+        "github_handle#0 (copy)"
+      ],
+      "stack_out": [
+        "\"github_boxgithub\"",
+        "github_handle#0 (copy)"
+      ]
+    },
+    "256": {
+      "op": "box_put",
+      "stack_out": []
+    },
+    "257": {
+      "op": "pushbytes \"Deposited GitHub handle: \"",
+      "defined_out": [
+        "\"Deposited GitHub handle: \""
+      ],
+      "stack_out": [
+        "\"Deposited GitHub handle: \""
+      ]
+    },
+    "284": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "\"Deposited GitHub handle: \"",
+        "github_handle#0 (copy)"
+      ]
+    },
+    "286": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "287": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

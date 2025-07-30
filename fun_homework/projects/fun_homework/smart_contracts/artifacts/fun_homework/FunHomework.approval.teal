@@ -1,0 +1,211 @@
+#pragma version 10
+#pragma typetrack false
+
+// smart_contracts.fun_homework.contract.FunHomework.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 1
+    bytecblock "github_boxgithub" 0x151f7c75
+    // smart_contracts/fun_homework/contract.py:5
+    // class FunHomework(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@10
+    pushbytess 0x02bece11 0xde99cce7 0x8cbe617d 0x5fff1b98 0x36205d95 // method "hello(string)string", method "set_github_handle(string)void", method "get_github_handle()string", method "initialize_github_handle()void", method "deposit(string)string"
+    txna ApplicationArgs 0
+    match main_hello_route@5 main_set_github_handle_route@6 main_get_github_handle_route@7 main_initialize_github_handle_route@8 main_deposit_route@9
+
+main_after_if_else@12:
+    // smart_contracts/fun_homework/contract.py:5
+    // class FunHomework(ARC4Contract):
+    pushint 0 // 0
+    return
+
+main_deposit_route@9:
+    // smart_contracts/fun_homework/contract.py:25
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/fun_homework/contract.py:5
+    // class FunHomework(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    // smart_contracts/fun_homework/contract.py:25
+    // @abimethod()
+    callsub deposit
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_initialize_github_handle_route@8:
+    // smart_contracts/fun_homework/contract.py:21
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub initialize_github_handle
+    intc_0 // 1
+    return
+
+main_get_github_handle_route@7:
+    // smart_contracts/fun_homework/contract.py:17
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_github_handle
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_set_github_handle_route@6:
+    // smart_contracts/fun_homework/contract.py:13
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/fun_homework/contract.py:5
+    // class FunHomework(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    // smart_contracts/fun_homework/contract.py:13
+    // @abimethod()
+    callsub set_github_handle
+    intc_0 // 1
+    return
+
+main_hello_route@5:
+    // smart_contracts/fun_homework/contract.py:9
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/fun_homework/contract.py:5
+    // class FunHomework(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    // smart_contracts/fun_homework/contract.py:9
+    // @abimethod()
+    callsub hello
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_bare_routing@10:
+    // smart_contracts/fun_homework/contract.py:5
+    // class FunHomework(ARC4Contract):
+    txn OnCompletion
+    bnz main_after_if_else@12
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_0 // 1
+    return
+
+
+// smart_contracts.fun_homework.contract.FunHomework.hello(name: bytes) -> bytes:
+hello:
+    // smart_contracts/fun_homework/contract.py:9-10
+    // @abimethod()
+    // def hello(self, name: String) -> String:
+    proto 1 1
+    // smart_contracts/fun_homework/contract.py:11
+    // return "Hello, " + name
+    pushbytes "Hello, "
+    frame_dig -1
+    concat
+    retsub
+
+
+// smart_contracts.fun_homework.contract.FunHomework.set_github_handle(github_handle: bytes) -> void:
+set_github_handle:
+    // smart_contracts/fun_homework/contract.py:13-14
+    // @abimethod()
+    // def set_github_handle(self, github_handle: String) -> None:
+    proto 1 0
+    // smart_contracts/fun_homework/contract.py:15
+    // self.github_box[String("github")] = github_handle
+    bytec_0 // "github_boxgithub"
+    box_del
+    pop
+    bytec_0 // "github_boxgithub"
+    frame_dig -1
+    box_put
+    retsub
+
+
+// smart_contracts.fun_homework.contract.FunHomework.get_github_handle() -> bytes:
+get_github_handle:
+    // smart_contracts/fun_homework/contract.py:19
+    // return self.github_box[String("github")]
+    bytec_0 // "github_boxgithub"
+    box_get
+    assert // check self.github_box entry exists
+    retsub
+
+
+// smart_contracts.fun_homework.contract.FunHomework.initialize_github_handle() -> void:
+initialize_github_handle:
+    // smart_contracts/fun_homework/contract.py:23
+    // self.set_github_handle(String("devblac"))
+    pushbytes "devblac"
+    callsub set_github_handle
+    retsub
+
+
+// smart_contracts.fun_homework.contract.FunHomework.deposit(github_handle: bytes) -> bytes:
+deposit:
+    // smart_contracts/fun_homework/contract.py:25-26
+    // @abimethod()
+    // def deposit(self, github_handle: String) -> String:
+    proto 1 1
+    // smart_contracts/fun_homework/contract.py:28
+    // self.github_box[String("github")] = github_handle
+    bytec_0 // "github_boxgithub"
+    box_del
+    pop
+    bytec_0 // "github_boxgithub"
+    frame_dig -1
+    box_put
+    // smart_contracts/fun_homework/contract.py:29
+    // return "Deposited GitHub handle: " + github_handle
+    pushbytes "Deposited GitHub handle: "
+    frame_dig -1
+    concat
+    retsub
